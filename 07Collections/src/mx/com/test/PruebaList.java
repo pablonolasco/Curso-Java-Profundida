@@ -24,11 +24,36 @@ public class PruebaList {
             listaElim.add(color);
         }
         
+        // Concatena las listas
+        lista.addAll(listaElim);
+        listaElim=null;
+        
         lista.forEach((color)->{
             System.out.println("color:"+color);
         });
         
+        System.out.println("");
         
+        convertirAMayuscula(lista);
+        
+        eliminarColor(lista,4,7);
+        
+         lista.forEach((color)->{
+            System.out.println("color:"+color);
+        });
+         
+         imprimirListaInversa(lista);
+    }
+
+    private static void eliminarColor(Collection<String> lista, int inicial, int tope) {
+       Iterator<String> iterator=lista.iterator();
+    }
+
+    private static void convertirAMayuscula(Collection<String> lista) {
+       
+    }
+
+    private static void imprimirListaInversa(Collection<String> lista) {
         
     }
 }
