@@ -5,6 +5,7 @@
  */
 package uno.conceptos.basicos;
 
+import uno.conceptos.basicos.arreglos.Ejercicios;
 import uno.conceptos.basicos.arreglos.LibroCalificaciones;
 
 /**
@@ -13,23 +14,7 @@ import uno.conceptos.basicos.arreglos.LibroCalificaciones;
  */
 public class Test {
     public static void main(String[] args) {
-       int [][]arregloCal={
-           {100,82,92},
-           {72,81,90},
-           {100,83,91},
-           {82,84,92},
-           {72,83,98},
-           {52,85,91},
-           {82,87,99},
-           {92,88,91},
-           {71,81,91},
-           {100,88,98},
-       };
-       
-        LibroCalificaciones libroCalificaciones= new LibroCalificaciones("Español", arregloCal);
-        System.out.printf("Bienvenido al libro de calificaciones de español"
-                + " %n%s%n%n",libroCalificaciones.getNombreCurso());
-        libroCalificaciones.procesarInformacion();
+        Ejercicios.duplicados();
     }
     
     public void repaso(){
@@ -54,5 +39,25 @@ public class Test {
                 System.out.println(fila+"-"+columna+"="+bidimensional[fila][columna]);
             }
         }
+    }
+    
+    public static void libroCalificaciones(){
+          int [][]arregloCal={
+           {100,82,92},// filas
+           {72,81,90},
+           {100,83,91},
+           {82,84,92},
+           {72,83,98},
+           {52,85,91},
+           {82,87,99},
+           {92,88,91},
+           {71,81,91},
+           {100,88,98},
+       };
+       
+        LibroCalificaciones libroCalificaciones= new LibroCalificaciones("Español", arregloCal);
+        System.out.printf("Bienvenido al libro de calificaciones de español"
+                + " %n%s%n%n",libroCalificaciones.getNombreCurso());
+        libroCalificaciones.procesarInformacion();
     }
 }

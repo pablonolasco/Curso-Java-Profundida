@@ -106,10 +106,11 @@ public class LibroCalificaciones {
     }
 
     private int obtenerMinima() {
-        int caliMinima = this.calificaciones[0][0];
+        int caliMinima = this.calificaciones[0][0];// 7
 
         for (int[] calificacionEstudiante : calificaciones) {
             for (int calificacion : calificacionEstudiante) {
+                //      74       <       84  si es menor calificacion ingresa al if
                 if (calificacion < caliMinima) {
                     caliMinima = calificacion;
                 }
